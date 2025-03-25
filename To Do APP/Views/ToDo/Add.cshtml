@@ -1,0 +1,28 @@
+﻿@model toDoList
+
+<form asp-action="Add" method="post">
+	<div class="form-group">
+		<label for="Title">Title</label>
+		<input type="text" id="Title" name="Title" class="form-control" required />
+	</div>
+
+	<div class="form-group">
+		<label for="IsCompleted">Is Completed</label>
+		<input type="checkbox" id="IsCompleted" name="IsCompleted" />
+	</div>
+
+	<div class="row pt-2 pb-2">
+		<div class="col-6">
+
+			<button type="submit" class="btn btn-primary" style="width:150px">
+				ADD
+			</button>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-action="Index" asp-controller="ToDo" class="btn btn-primary">
+				Back To Do List
+			</a>
+		</div>
+
+	</div>
+</form>
